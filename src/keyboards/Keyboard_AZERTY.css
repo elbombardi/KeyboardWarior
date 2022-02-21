@@ -1,0 +1,100 @@
+::selection{background-color:none; color:inherit;}
+
+body{
+  background-color: #dddddd; 
+}
+
+.azerty.keyboard{
+  width:620px; height: 320px;
+  background-color: #111;
+  margin: 0px auto;
+  border-radius: 9px;
+  padding: 30px;
+  color: #eee;
+}
+
+.azerty .logo{
+  visibility: hidden;
+  width:40px; height:40px;
+  background-color:#CCC;
+  color: #222;
+  font-weight:300;
+  font-style: oblique;
+  font-size:30px;
+  line-height:40px;
+  text-align:center;
+  margin: -20px auto 10px auto;
+  border-radius:40px;
+}
+
+
+.azerty .lights{
+  float:right;
+  position:relative;
+  top:-45px;
+  right:8px;
+  padding:0;
+  margin:0;
+}
+.azerty .lights span{margin:0 20px 0 20px; padding:0; text-align: center;}
+
+.azerty .lights span:after {
+  content:"";
+  width:11px; height:8px;
+  top: 22px; margin-left:-9px;
+  position:absolute;
+  border-radius: 3px;
+}
+
+.azerty .lights span.on:after  {
+  background-color:#14B524;
+}
+
+.azerty .lights span.off:after  {
+  background-color:gray;
+}
+
+.azerty .key{
+  width: 40px; height:40px;
+  display:block;
+  background-color:#333;
+  text-align: left;
+  padding-left: 8px;
+  line-height: 29px;
+  border-radius:2px;
+  float:left; margin-left: 2px;
+  margin-bottom:2px;
+  transition: box-shadow 0.1s ease;
+}
+
+.azerty .section-a{width:650px; height:260px; float:left;}
+.azerty .section-b{width:150px; height:260px; float:left;}
+
+.azerty .function{font-size: 12px; width:30px; height:30px; margin-bottom:15px;}
+.azerty .small{font-size:10px; line-height:13px; text-align: center; padding:0 5px; padding-top:2px; height:28px !important;}
+.azerty .space1{margin-right: 43px !important;}
+.azerty .space2{margin-right: 25px !important;}
+.azerty .dual {font-size: 14px; line-height: 20px; width:30px; }
+.azerty .backspace {width:84px; font-size: 12px;}
+.azerty .tab {width: 50px; line-height: 40px; font-size:13px;}
+.azerty .letter{width:30px;}
+.azerty .slash{width:64px;}
+.azerty .caps{width:70px; font-size:12px; line-height:18px;}
+.azerty .enter{width:72px; line-height:40px; text-align: center; padding-left:0;}
+.azerty .enter2{width:52px; line-height:40px; text-align: center; padding-left:0; padding-top:0; border-top:0}
+.azerty .shift.left{width: 90px;line-height: 40px; font-size:13px;}
+.azerty .shift.right{width: 104px;line-height: 40px; font-size:13px;}
+.azerty .ctrl{width: 50px; line-height: 40px; font-size:13px;}
+.azerty .alt{width: 50px; line-height: 40px; font-size:13px;}
+.azerty .space{width:234px;}
+.azerty .arrows{position:relative; top:42px;}
+.azerty .sec-func .key{width: 32px; font-size:10px; text-align:left; line-height:40px; float:left;}
+.azerty .sec-func div.dual{line-height:20px;}
+.azerty .arrows .key{text-align: center; padding-left: 7px; margin-left:2px;}
+.azerty .hidden{visibility: hidden;}
+
+.azerty .key.down{
+  box-shadow:0px 0px 10px #14B524; 
+  background-color: #0c2b0f;
+  z-index:1000;
+}
