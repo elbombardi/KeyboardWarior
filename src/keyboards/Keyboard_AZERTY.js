@@ -1,16 +1,118 @@
 import "./Keyboard_AZERTY.css" 
 
+const keyToCodeMap = {
+    '²': 'Backquote', 
+    '&': 'Digit1', 
+    'é': 'Digit2', 
+    '"': 'Digit3', 
+    '\'': 'Digit4', 
+    '(': 'Digit5', 
+    '-': 'Digit6', 
+    'è': 'Digit7', 
+    '_': 'Digit8', 
+    'ç': 'Digit9', 
+    'à': 'Digit0', 
+    ')': 'Minus', 
+    '=': 'Equal', 
+    'a': 'KeyQ', 
+    'z': 'KeyW', 
+    'e': 'KeyE', 
+    'r': 'KeyR', 
+    't': 'KeyT', 
+    'y': 'KeyY', 
+    'u': 'KeyU', 
+    'i': 'KeyI', 
+    'o': 'KeyO', 
+    'p': 'KeyP', 
+    'Dead': 'BracketLeft', 
+    '$': 'BracketRight', 
+    'q': 'KeyA', 
+    's': 'KeyS', 
+    'd': 'KeyD', 
+    'f': 'KeyF', 
+    'g': 'KeyG', 
+    'h': 'KeyH', 
+    'j': 'KeyJ', 
+    'k': 'KeyK', 
+    'l': 'KeyL', 
+    'm': 'Semicolon', 
+    'ù': 'Quote', 
+    '*': 'Backslash', 
+    '<': 'IntlBackslash', 
+    'w': 'KeyZ', 
+    'x': 'KeyX', 
+    'c': 'KeyC', 
+    'v': 'KeyV', 
+    'b': 'KeyB', 
+    'n': 'KeyN', 
+    ',': 'KeyM',
+    ' ': 'Space', 
+    ';': 'Comma', 
+    ':': 'Period', 
+    '!': 'Slash', 
+    '³': 'Backquote', 
+    '1': 'Digit1', 
+    '2': 'Digit2', 
+    '3': 'Digit3', 
+    '4': 'Digit4', 
+    '5': 'Digit5', 
+    '6': 'Digit6', 
+    '7': 'Digit7', 
+    '8': 'Digit8', 
+    '9': 'Digit9', 
+    '0': 'Digit0', 
+    '°': 'Minus', 
+    '+': 'Equal', 
+    'A': 'KeyQ', 
+    'Z': 'KeyW', 
+    'E': 'KeyE', 
+    'R': 'KeyR', 
+    'T': 'KeyT', 
+    'Y': 'KeyY', 
+    'U': 'KeyU', 
+    'I': 'KeyI', 
+    'O': 'KeyO', 
+    'P': 'KeyP', 
+    '£': 'BracketRight', 
+    'Q': 'KeyA', 
+    'S': 'KeyS', 
+    'D': 'KeyD', 
+    'F': 'KeyF', 
+    'G': 'KeyG', 
+    'H': 'KeyH', 
+    'J': 'KeyJ', 
+    'K': 'KeyK', 
+    'L': 'KeyL', 
+    'M': 'Semicolon', 
+    '%': 'Quote', 
+    'µ': 'Backslash', 
+    'W': 'KeyZ', 
+    'X': 'KeyX', 
+    'C': 'KeyC', 
+    'V': 'KeyV', 
+    'B': 'KeyB', 
+    'N': 'KeyN', 
+    '?': 'KeyM', 
+    '.': 'Comma', 
+    '/': 'Period', 
+    '§': 'Slash', 
+    '>': 'IntlBackslash', 
+}
+
 function Keyboard_AZERTY(props) {  
-  const key = function(classes, label, keyCode) {
+
+  const key = function(classes, label, keyCode, expectedKey) {
+    let isExpectedCode = (keyToCodeMap[props.expectedKey] === keyCode) ? " expected" : ""
+
     if (props.keyState[keyCode]) {
-      return <div className={"key " + classes + " down"}>{label}</div> 
+      return <div className={"key " + classes + " down "}>{label}</div> 
     }
-    return <div className={"key " + classes}>{label}</div>
+    return <div className={"key " + classes + isExpectedCode}>{label}</div>
   };
 
   const keyDual = function(classes, labels, keyCode) {
     let label = (<>{labels.map((item, index) => {
-      return <>{item}<br/></>
+      return <span key={index}>{item}<br/></span>
     })}</>)
     return key(classes + " dual", label, keyCode)
   };
@@ -28,6 +130,7 @@ function Keyboard_AZERTY(props) {
   
   return (
   <div className="azerty keyboard">
+    {props.layoutSelector()}
     <div className="logo"/>
     {capsLockMarkup()}
     <div className="section-a">
@@ -72,7 +175,7 @@ function Keyboard_AZERTY(props) {
       {keyDual("",["¨","^"], "BracketLeft")} 
       {keyDual("",["£","$"], "BracketRight")} 
       {key("enter","↵", "Enter")}
-      {key("caps","Caps", "CapsLock")}
+      {key("caps","Ver Maj", "CapsLock")}
       {key("letter","Q", "KeyA")}
       {key("letter","S", "KeyS")}
       {key("letter","D", "KeyD")}
@@ -87,6 +190,7 @@ function Keyboard_AZERTY(props) {
       {keyDual("",["µ","*"], "Backslash")}
       {key("enter2","", "Enter")}
       {key("shift left","⇧", "ShiftLeft")}
+      {keyDual("letter",[">","<"], "IntlBackslash")}  
       {key("letter","W", "KeyZ")}  
       {key("letter","X", "KeyX")}
       {key("letter","C", "KeyC")}

@@ -82,7 +82,7 @@ body{
 .azerty .caps{width:70px; font-size:12px; line-height:18px;}
 .azerty .enter{width:72px; line-height:40px; text-align: center; padding-left:0;}
 .azerty .enter2{width:52px; line-height:40px; text-align: center; padding-left:0; padding-top:0; border-top:0}
-.azerty .shift.left{width: 90px;line-height: 40px; font-size:13px;}
+.azerty .shift.left{width: 50px;line-height: 40px; font-size:13px;}
 .azerty .shift.right{width: 104px;line-height: 40px; font-size:13px;}
 .azerty .ctrl{width: 50px; line-height: 40px; font-size:13px;}
 .azerty .alt{width: 50px; line-height: 40px; font-size:13px;}
@@ -96,5 +96,10 @@ body{
 .azerty .key.down{
   box-shadow:0px 0px 10px #14B524; 
   background-color: #0c2b0f;
+  z-index:1000;
+}
+
+.azerty .key.expected{
+  background-color: #13216b;
   z-index:1000;
 }

@@ -4,7 +4,7 @@ body{
   background-color: #dddddd; 
 }
 
-.querty.keyboard{
+.qwerty.keyboard{
   width:620px; height: 320px;
   background-color: #111;
   margin: 0px auto;
@@ -13,7 +13,7 @@ body{
   color: #eee;
 }
 
-.querty .logo{
+.qwerty .logo{
   visibility: hidden;
   width:40px; height:40px;
   background-color:#CCC;
@@ -28,7 +28,7 @@ body{
 }
 
 
-.querty .lights{
+.qwerty .lights{
   float:right;
   position:relative;
   top:-45px;
@@ -36,9 +36,9 @@ body{
   padding:0;
   margin:0;
 }
-.querty .lights span{margin:0 20px 0 20px; padding:0; text-align: center;}
+.qwerty .lights span{margin:0 20px 0 20px; padding:0; text-align: center;}
 
-.querty .lights span:after {
+.qwerty .lights span:after {
   content:"";
   width:11px; height:8px;
   top: 22px; margin-left:-9px;
@@ -46,15 +46,15 @@ body{
   border-radius: 3px;
 }
 
-.querty .lights span.on:after  {
+.qwerty .lights span.on:after  {
   background-color:#14B524;
 }
 
-.querty .lights span.off:after  {
+.qwerty .lights span.off:after  {
   background-color:gray;
 }
 
-.querty .key{
+.qwerty .key{
   width: 40px; height:40px;
   display:block;
   background-color:#333;
@@ -67,33 +67,38 @@ body{
   transition: box-shadow 0.1s ease;
 }
 
-.querty .section-a{width:650px; height:260px; float:left;}
-.querty .section-b{width:150px; height:260px; float:left;}
+.qwerty .section-a{width:650px; height:260px; float:left;}
+.qwerty .section-b{width:150px; height:260px; float:left;}
 
-.querty .function{font-size: 12px; width:30px; height:30px; margin-bottom:15px;}
-.querty .small{font-size:10px; line-height:13px; text-align: center; padding:0 5px; padding-top:2px; height:28px !important;}
-.querty .space1{margin-right: 43px !important;}
-.querty .space2{margin-right: 25px !important;}
-.querty .dual {font-size: 14px; line-height: 20px; width:30px; }
-.querty .backspace {width:84px; font-size: 12px;}
-.querty .tab {width: 50px; line-height: 40px; font-size:13px;}
-.querty .letter{width:30px;}
-.querty .slash{width:64px;}
-.querty .caps{width:70px; font-size:12px; line-height:18px;}
-.querty .enter{width:92px; line-height:40px; text-align: center; padding-left:0;}
-.querty .shift.left{width: 90px;line-height: 40px; font-size:13px;}
-.querty .shift.right{width: 104px;line-height: 40px; font-size:13px;}
-.querty .ctrl{width: 50px; line-height: 40px; font-size:13px;}
-.querty .alt{width: 50px; line-height: 40px; font-size:13px;}
-.querty .space{width:234px;}
-.querty .arrows{position:relative; top:42px;}
-.querty .sec-func .key{width: 32px; font-size:10px; text-align:left; line-height:40px; float:left;}
-.querty .sec-func div.dual{line-height:20px;}
-.querty .arrows .key{text-align: center; padding-left: 7px; margin-left:2px;}
-.querty .hidden{visibility: hidden;}
+.qwerty .function{font-size: 12px; width:30px; height:30px; margin-bottom:15px;}
+.qwerty .small{font-size:10px; line-height:13px; text-align: center; padding:0 5px; padding-top:2px; height:28px !important;}
+.qwerty .space1{margin-right: 43px !important;}
+.qwerty .space2{margin-right: 25px !important;}
+.qwerty .dual {font-size: 14px; line-height: 20px; width:30px; }
+.qwerty .backspace {width:84px; font-size: 12px;}
+.qwerty .tab {width: 50px; line-height: 40px; font-size:13px;}
+.qwerty .letter{width:30px;}
+.qwerty .slash{width:64px;}
+.qwerty .caps{width:70px; font-size:12px; line-height:18px;}
+.qwerty .enter{width:92px; line-height:40px; text-align: center; padding-left:0;}
+.qwerty .shift.left{width: 90px;line-height: 40px; font-size:13px;}
+.qwerty .shift.right{width: 104px;line-height: 40px; font-size:13px;}
+.qwerty .ctrl{width: 50px; line-height: 40px; font-size:13px;}
+.qwerty .alt{width: 50px; line-height: 40px; font-size:13px;}
+.qwerty .space{width:234px;}
+.qwerty .arrows{position:relative; top:42px;}
+.qwerty .sec-func .key{width: 32px; font-size:10px; text-align:left; line-height:40px; float:left;}
+.qwerty .sec-func div.dual{line-height:20px;}
+.qwerty .arrows .key{text-align: center; padding-left: 7px; margin-left:2px;}
+.qwerty .hidden{visibility: hidden;}
 
-.querty .key.down{
+.qwerty .key.down{
   box-shadow:0px 0px 10px #14B524; 
   background-color: #0c2b0f;
+  z-index:1000;
+}
+
+.qwerty .key.expected{
+  background-color: #13216b;
   z-index:1000;
 }
